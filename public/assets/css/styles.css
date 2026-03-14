@@ -112,7 +112,7 @@ body {
 .sidebar {
     position: sticky;
     width: 20vw;
-    min-width: 300px;
+    min-width: 320px;
     flex-shrink: 0;
     border-right: 0.5px solid var(--border);
     overflow-y: auto;
