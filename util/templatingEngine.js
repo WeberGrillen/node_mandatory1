@@ -1,0 +1,16 @@
+import fs from 'fs';
+
+export function constructPage(page, options = {}) {
+    const header = readPage('./public/components/header/header.html');
+    const sidebar = readPage('./public/components/sidebar/sidebar.html')
+
+    const result = header + page + sidebar;
+    console.log(result);
+    return result
+
+}
+
+
+export function readPage(path) {
+    return fs.readFileSync(path).toString();
+}
