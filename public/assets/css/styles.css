@@ -24,25 +24,64 @@ body {
 
 .header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
     background: var(--bg-header);
+    border-bottom: 0.5px solid var(--border);
     width: 100%;
     height: 8vh;
+    flex-shrink: 0; /* does'nt work?? */
 }
 
-header nav {
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+
+.site-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     gap: 1rem;
-    padding: 0 3rem;
+    font-size: 2vh;
+    
 }
 
-nav a {
+.site-title a {
     text-decoration: none;
     color: inherit; 
+    
 }
 
-nav a:hover{
+.site-title a:hover{
     color: var(--text-sencondary);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-sidebar);
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rm;
+    color: white;
+    width: 160px;
 }
