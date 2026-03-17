@@ -1,0 +1,93 @@
+<main class="main-content">
+     <h1 class="page-title" >Variables and Datatypes</h1>
+    <p class="page-subtitle"></p>
+
+
+    <hr class="divider">
+
+    <h2 class="section-heading">What is a variable?</h2>
+    <p class="body-text">A variable is a place/container to store information in our code</p>
+    <p class="body-text">Creating a variable in JavaScript is also known as declaring a variable</p>
+
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Different kinds of variables in JavaScript</h2>
+    <p class="body-text">In JavaScript there is three ways to declar a variable:</p>
+    <p class="body-text">● Var</p>
+    <p class="body-text">● Let</p>
+    <p class="body-text">● Const</p>
+
+    <p class="body-text">Var is something we always want to avoid as it has a global-scope. We will get more into scopes later.</p>
+    <p class="body-text">Let makes the variable able to change</p>
+    <p class="body-text">Const makes the variable unable to change</p>
+    
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Different kinds of Datatypes</h2>
+    <p class="body-text">In JavaScript we have Primitive Datatypes & Non-Primitive Datatypes</p>
+
+    <h2 class="section-heading">Primitive Datatypes:</h2>
+    <h2 class="section-heading">Number</h2>
+    <p class="body-text">The number datatype represents numeric values & Not a Number(NaN)</p>
+    <pre><code class="language-javascript">const age = 24;
+const price = 69.69;
+const notANumber = NaN;</code></pre>
+
+    <h2 class="section-heading">Boolean</h2>
+    <p class="body-text">The boolean datatype represents True or False</p>
+    <pre><code class="language-javascript">const isFrederikOver18 = true;
+const isFrederikUnder18 = false;</code></pre>
+
+    <h2 class="section-heading">Null</h2>
+    <p class="body-text">The Undefined datatype represents a value that has no value. In other words, you intentionally tell it to have no value</p>
+    <pre><code class="language-javascript">const user = null;</code></pre>
+
+    <h2 class="section-heading">Undefined</h2>
+    <p class="body-text">The undefined datatype is a value that has been declared but not assinged.</p>
+    <pre><code class="language-javascript">const notAssigned;
+console.log(notAssigned);</code></pre>
+
+    <h2 class="section-heading">BigInt</h2>
+    <p class="body-text">The bigInt datatype is an uncommon datatype only used when you need Intergers larger than the "normal" Number datatype.</p>
+    <p class="body-text">The datatype Number has it's largest number at 2^52-1 and beyond that you will get precision errros!</p>
+    <p class="body-text">There is a few things to know when you use bigInt. bigInt and Numbers can't mix, and bigInt doesn't allow decimals!</p>
+    <p class="body-text">bigInt also doesn't allow the build in methods like Math object!</p>
+    <p class="body-text">Here is an example of a bigInt:</p>
+    <pre><code class="language-javascript">const veryLongId = 123456789012345678901234567890n;</code></pre>    
+
+    <h2 class="section-heading">Symbol</h2>
+    <p class="body-text">The Symbol datatype is also an uncommon datatype that creates a guaranteed unique value every single time.</p>
+    <p class="body-text">I don't know much about the Symbol datatype but i found an example from geeksforgeeks.com</p>
+    <pre><code class="language-javascript">let sym = Symbol('unique')</code></pre> 
+
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Non-Primitive Datatypes:</h2>
+
+    <h2 class="section-heading">Object</h2>
+    <p class="body-text">The Object datatype is a collection of key-value pairs. Inside the object you can have different kinds of datatypes</p>
+    <pre><code class="language-javascript">const myDog = { name: 'Milo', age: '2' }</code></pre> 
+    
+    <h2 class="section-heading">Array</h2>
+    <p class="body-text">The Array datatype enables you to store a collection of multiple items under one variable name</p>
+    <p class="body-text">Arrays are able to store multiple kinds of datatypes, but the best practices is to only use one datatype at the time to make your code easy to understand!</p>
+    <p class="body-text">Here is an example of how to create an array containing fruits:</p>
+    <pre><code class="language-javascript">let fruits = [ "apple", "banana", "kiwi"]</code></pre> 
+
+    <h2 class="section-heading">Function</h2>
+    <p class="body-text">The function datatype is a set of instruction that can be resused whenevery they are called.</p>
+    <p class="body-text">Since functions is a datatype we can use them as parameters into another function but we will go deeper with that in the callback subject</p>
+    <p class="body-text">Here is an example of a function without any parameters:</p>
+    <pre><code class="language-javascript">function sayHello() {
+    return 'Hello'
+};
+    </code></pre> 
+
+</main>
+</div> <!-- sidebar-container -->
+</div> <!-- layout -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<main class="main-content">
+     <h1 class="page-title" >Environment Variables</h1>
+
+    <hr class="divider">
+    
+    <h2 class="section-heading">What is environment variables?</h2>
+    <p class="body-text">Environment variables is a variable we can define outside of our code that can make different changes to our application.</p>
+
+    <h2 class="section-heading">Why do we use them?</h2>
+    <p class="body-text">Environment variables can have a lot of differnt use cases, but we primaraly use them at it makes our code flexable & to hide sencitive information in our application.</p>
+    <p class="body-text">Here are some of the most common use cases we have used so far:</p>
+    <p class="body-text">● API keys & secrets</p>
+    <p class="body-text">● Database connections</p>
+    <p class="body-text">● Port numbers</p>
+
+    <hr class="divider">
+
+    <p class="body-text">In node we will install a dependency called "cross-env" as environment variable are set differntly on different platforms.</p>
+    <p class="body-text">This makes it easy for us as developers as we can have a single command without worrying about settings or using the environment variables properly for the platform we are on.</p>
+    <p class="body-text">To install cross-env we will run this command:</p>
+    <pre><code class="language-javascript">$ npm install cross-env</code></pre>
+
+    <hr class="divider">
+    
+    <h2 class="section-heading">Using Environment Variables in Node.js</h2>
+
+    <p class="body-text">In Node.js we use the process.env object to access environment variables</p>
+    <p class="body-text">Here is an example from my project: </p>
+
+    <pre><code class="language-bash">"scripts": {
+    "start-dev": "cross-env PORT=8080 NODE_ENV=DEV nodemon --ext js,html,css app.js",
+    "start-prod": "cross-env PORT=80 node app.js"
+  },</code></pre>
+
+    
+    <pre><code class="language-bash">const PORT = process.env.PORT || 8080;
+
+const server = app.listen(PORT, () => {
+    console.log('Server started in port ', server.address().port);
+});</code></pre>
+
+    <p class="body-text">Here we have two scripts. One of them if for development and the other is for production.</p>
+    <p class="body-text">In the "start-dev" we start by writing cross-env as this will work for cross-platform.</p>
+    <p class="body-text">PORT=8080 sets our port to 8080. In our app we can then use process.env.PORT to access the port we just set.</p>
+    <p class="body-text">NODE_ENV=DEV tells the app it's running in dev mode.</p>
+    <p class="body-text">We use nodemon instead of node as we want our app to hot reload when we make changes in js, html or css files!</p>
+    <p class="body-text">The last thing is app.js where we tell nodemon where to run our app from.</p>
+
+    
+
+
+
+</main>
+</div> <!-- sidebar-container -->
+</div> <!-- layout -->
+</body>
+</html>

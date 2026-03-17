@@ -1,0 +1,83 @@
+<main class="main-content">
+    <h1 class="page-title" >Npm & package.json</h1>
+    <p class="page-subtitle">Node Package Manager</p>
+
+    <hr class="divider">
+
+    <p class="body-text">Npm is the package manager for Node.js and is used to install a wide array of open-sourse JavaScript packages.</p>
+    <p class="body-text">To get your project started with npm we will run the following command:</p>
+
+    <pre><code class="language-javascript">$ npm init</code></pre>
+
+    <p class="body-text">First it will ask you a seires of questions and then generate your package.json file.</p>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Package.json</h2>
+    <p class="body-text">Package.json is a file that contains information about your project.</p>
+    <p class="body-text">I will include metadata like name & version, but also important things about the project like dependencies and scripts.</p>
+
+    <p class="body-text">Here is an exsample for a package.json file from this project.</p>
+
+    <pre><code class="language-javascript">{
+  "name": "mandatory1_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start-dev": "cross-env PORT=8080 NODE_ENV=DEV nodemon --ext js,html,css app.js",
+    "start-prod": "cross-env PORT=80 node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "express": "^5.2.1"
+  }
+}</code></pre>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">How to install dependencies?</h2>
+    <p class="body-text">Installing a dependency is quite easy and you might already have seen it in the Express subject.</p>
+    <p class="body-text">To install the dependencies from your package.json you will run the following command:</p>
+
+    <pre><code class="language-javascript">$ npm install</code></pre>
+
+    <p class="body-text">This will read your package.json files and create the folder node_modules where all of your dependencies will be.</p>
+    <p class="body-text">If you want to install a single dependency you could run the command instead:</p>
+
+    <pre><code class="language-javascript">$ npm install DEPENDENCY_NAME</code></pre>
+
+    <p class="body-text">This will add your dependency to your package.json file and install it into the node_modules folder.</p>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Running Scripts</h2>
+    <p class="body-text">In package.json we can create script objects that can be usefull for an array of differnt things. Only the imagination is the limit here.</p>
+    <p class="body-text">In this project i have created two different script that I can run:</p>
+
+    <pre><code class="language-javascript">"scripts": {
+    "start-dev": "cross-env PORT=8080 NODE_ENV=DEV nodemon --ext js,html,css app.js",
+    "start-prod": "cross-env PORT=80 node app.js"
+  },</code></pre>
+
+    <p class="body-text">In other subjects like Environment Variables & nodemon we will get a deeper understading of what these scripts do.</p>
+    <p class="body-text">But to run a script like theses we will type the following command:</p>
+
+    <pre><code class="language-javascript">$ npm run SCRIPT_NAME</code></pre>
+      
+
+    
+
+
+
+
+
+</main>
+</div> <!-- sidebar-container -->
+</div> <!-- layout -->
+</body>
+</html>
