@@ -11,8 +11,8 @@
     --bg-element: #2c2c2a;
     --border: #2e2e2b;
 
-    --text-primary: #d3d1c7;
-    --text-sencondary: #888780;
+    --text-primary: #eceadf;
+    --text-sencondary: #a1a097;
     --text-muted: #5f5e5a;
     --text-code: #b4b2a9;
 }
@@ -142,7 +142,7 @@ body {
 
 .nav-label {
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 700;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.08rem;
@@ -160,7 +160,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: 0.1s;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .nav-item:hover {
