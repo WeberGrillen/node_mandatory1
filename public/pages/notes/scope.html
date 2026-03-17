@@ -1,8 +1,82 @@
 <main class="main-content">
-     <h1 class="page-title" >Git</h1>
-    <p class="page-subtitle">"Fast, unopinionated, minimalist web framework for Node.js"</p>
+    <h1 class="page-title" >Scope</h1>
+    <p class="page-subtitle">Scope = Visibility</p>
 
     <hr class="divider">
+
+    <h2 class="section-heading">What is a Scope?</h2>
+    <p class="body-text">Scope determines the accessibility of a variable.</p>
+    <p class="body-text">In JavaScript there is 3 kinds of scopes:</p>
+    <p class="body-text">● Global scope</p>
+    <p class="body-text">● Function scope</p>
+    <p class="body-text">● Bloack scope</p>
+
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Global Scope</h2>
+    <p class="body-text">Variables declaied in the global scope is accessable everywhere in a JavaScript file.</p>
+    <p class="body-text">Here is an example:</p>
+    <pre><code class="language-javascript">let name = "Frederik"; // global
+
+function greet() {
+    console.log(name); // able to access
+}</code></pre>
+    <p class="body-text">Global variables has a Global Scope.</p>
+
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Function Scope</h2>
+    <p class="body-text">Variables declaied inside a function will not be accessable outside of a function</p>
+    <p class="body-text">Here is an example:</p>
+    <pre><code class="language-javascript">function greet() {
+    const name = "Frederik"; // function scope
+
+    console.log(name); // able to access name as it's still in the function
+}
+greet();
+console.log(name); // ReferenceError: name is not defined <- outside scope</code></pre>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Block Scope</h2>
+    <p class="body-text">Variables declaied inside a block will not be accessable outside the block</p>
+    <p class="body-text">This only applies to let and const and is why we want to avoid using var</p>
+
+    <pre><code class="language-javascript">{
+  const x = 2; // block scope
+}
+// x can NOT be used here <- outside scope
+// ReferenceError: x is not defined</code></pre>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Why we DON'T ever use var</h2>
+    <p class="body-text">The reason to always want to avoid var is that var leaks to the next tier of scope.</p>
+    <p class="body-text">So if we have a var in a block scope it will leak into a function scope, and a var in a function scope will leak into global scope which creates unpredicablility!</p>
+
+    <p class="body-text">Example of block leaking into function scope:</p>
+
+    <pre><code class="language-javascript">function greet() {
+    if (true) {
+        var name = "Frederik"; // declared in block
+    }
+    console.log(name); // "Frederik" leaked into function!
+}</code></pre>
+
+    <pre><code class="language-javascript">function greet() {
+    var name = "Frederik"; // declared in function
+}
+
+greet();
+console.log(name); // "Frederik" leaked into global!</code></pre>
+
+
+    
+
+    
+
 
 </main>
 </div> <!-- sidebar-container -->

@@ -15,6 +15,4 @@ const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () => {
     console.log('Server started in port ', server.address().port);
-    console.log("5" == 5)
-    console.log("5" === 5)
 });
