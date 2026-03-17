@@ -6,7 +6,7 @@ export function constructPage(page, options = {}) {
     // const footer = readPage('./public/components/footer/footer.html')
 
     const result = header +  sidebar + page;
-    console.log(result);
+    
     return result
 
 }

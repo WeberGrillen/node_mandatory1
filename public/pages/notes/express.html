@@ -1,0 +1,51 @@
+<main class="main-content">
+    <h1 class="page-title" >What is Express?</h1>
+    <p class="page-subtitle">"Fast, unopinionated, minimalist web framework for Node.js"</p>
+
+    <hr class="divider">
+
+    <p class="body-text">Express is a minimal framework made for Node.js that makes it much easier to create HTTP servers without having do it yourself!</p>
+    <p class="body-text">They praise themself as being super lightweight with only encluding core features and is the most popular framework for Node.js.</p>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">How to install Express</h2>
+    <p class="body-text">Before using Express.js we first have to install it!</p>
+
+    <pre><code class="language-bash">$ npm install express</code></pre>
+
+    <p class="body-text">This will add three folders to your project:</p>
+    <p class="body-text">● node_modules</p>
+    <p class="body-text">● package-lock.json</p>
+    <p class="body-text">● package.json</p>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">How to get your server running</h2>
+    <p class="body-text">Now that we have installed Express to our project we can begin to use it!</p>
+
+    <p class="body-text">First off we create a file called app.js. This file should be in the root of your project!</p>
+
+    <p class="body-text">Then we import the Express library we just intalled into app.js by typing:</p>
+
+    <pre><code class="language-javascript">import express from 'express'</code></pre>
+
+    <p class="body-text">Now that we have imported the library, the next step is to create the app instance.</p>
+
+    <pre><code class="language-javascript">const app = express();</code></pre>
+
+    <p class="body-text">Last step is to tell Express which port we want to listen on, to start the webserver.</p>
+
+    <pre><code class="language-javascript">const PORT = process.env.PORT || 8080;
+
+const server = app.listen(PORT, () => {
+console.log('Server started in port ', server.address().port);
+});</code></pre>
+
+    <p class="body-text">Now we can start the server and visit "http://localhost:8080" in your browser.</p>
+
+</main>
+</div> <!-- sidebar-container -->
+</div> <!-- layout -->
+</body>
+</html>
