@@ -1,0 +1,37 @@
+<main class="main-content">
+    <h1 class="page-title" >Callback Functions in JavaScript</h1>
+    <p class="page-subtitle">A callback function is a function you pass into another function to be called later.</p>
+    <p class="page-subtitle">They might be a bit complicated at first but in JavaScript we use callback functions all the time.</p>
+    <pre><code class="language-javascript">function greet(name, callback) {
+    console.log('Hello ' + name);
+    callback(); // call the function that was passed in
+}
+
+function sayBye() {
+    console.log('Goodbye!'');
+}
+
+greet('Frederik', sayBye);
+// "Hello Frederik"
+// "Goodbye!"</code></pre>
+
+    <p class="page-subtitle">The example I have above we first call greet that has two arguments. "Frederik" & sayBye.</p>
+    <p class="page-subtitle">The greet function will then print out to console.log = "Hello Frederik". Then run callback(); which is the sayBye function that console.logs "Goodbye!"</p>
+
+    <hr class="divider">
+
+    <h2 class="section-heading">Why Are Callback Functions Usefull?</h2>
+    <p class="page-subtitle">The reason we use them is because sometimes we need to do a task, and then when it's done, run another task</p>
+    <p class="page-subtitle">I have an example of a callback function that is used all the time:</p>
+
+    <pre><code class="language-javascript">button.addEventListener("click", () => {
+    console.log("button was clicked!");
+});</code></pre>
+
+
+
+</main>
+</div> <!-- sidebar-container -->
+</div> <!-- layout -->
+</body>
+</html>
